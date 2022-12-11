@@ -1,0 +1,28 @@
+@model IEnumerable<crm_ps.Models.Course>
+
+@{
+    ViewData["Title"] = "Listagem de cursos";
+}
+
+<h2>Cursos</h2>
+
+<p>
+    <a asp-action="Criar">Cadastrar novo curso</a>
+</p>
+
+<div>
+    @foreach (var item in Model)
+    {
+        <div class="bg-warning">
+            <h2>
+                @Html.DisplayFor(model => item.Name)
+            </h2>
+            <p>
+                @Html.DisplayFor(model => item.Level)
+            </p>
+            <div>
+                <a asp-action="Inscrever" asp-route-id="@item.Id">Inscrever-se</a>
+            </div>
+        </div>
+    }
+</div>

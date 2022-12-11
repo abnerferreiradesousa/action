@@ -16331,6 +16331,16 @@
       "FilePath": "/home/abner/crm-ps/Views/Shared/Error.cshtml",
       "TargetPath": "Views\\Shared\\Error.cshtml",
       "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/home/abner/crm-ps/Views/Course/Index.cshtml",
+      "TargetPath": "Views\\Course\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/home/abner/crm-ps/Views/Course/Criar.cshtml",
+      "TargetPath": "Views\\Course\\Criar.cshtml",
+      "FileKind": "mvc"
     }
   ],
   "SerializationFormat": "0.2"
