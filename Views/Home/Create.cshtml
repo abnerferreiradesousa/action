@@ -1,16 +1,16 @@
-@model crm_ps.Models.Course
+@model crm_ps.Models.Candidate
 
 @{
-    ViewData["Title"] = "Cadastrando novo curso";
+    ViewData["Title"] = "Cadastrando candidato";
 }
 
-<h1>Cadastrar novo curso</h1>
+<h1>Cadastre-se</h1>
 
 <hr />
 
-<div class="row">
+<div class="row divclasstwo">
     <div class="col-md-4">
-        <form asp-action="Criar">
+        <form asp-action="Create">
 
             <div class="form-group">
                 <label asp-for="Name" class="control-label"></label>
@@ -18,19 +18,16 @@
             </div>
 
             <div class="form-group">
-                <label asp-for="Level" class="control-label"></label>
-                <input asp-for="Level" class="form-control" />
+                <label asp-for="CPF" class="control-label"></label>
+                <input asp-for="CPF" class="form-control" />
             </div>
 
             <br />
-
             <div class="form-group">
+                <a asp-action="Index" class="btn btn-primary">Voltar</a>
                 <input type="submit" value="Criar" class="btn btn-primary">
             </div>
         </form>
     </div>
 </div>
-<hr>
-<div>
-    <a asp-action="Index">Voltar</a>
-</div>
+

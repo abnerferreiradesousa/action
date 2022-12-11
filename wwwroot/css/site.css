@@ -1,3 +1,20 @@
+.divclasstwo
+{
+  height:60vh;
+}
+
+.divclass
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:70vh;
+}
+
+.divclass a {
+  margin: 1rem;
+}
+
 html {
   font-size: 14px;
 }

@@ -16303,13 +16303,18 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/home/abner/crm-ps/Views/Home/Privacy.cshtml",
-      "TargetPath": "Views\\Home\\Privacy.cshtml",
+      "FilePath": "/home/abner/crm-ps/Views/Course/Create.cshtml",
+      "TargetPath": "Views\\Course\\Create.cshtml",
       "FileKind": "mvc"
     },
     {
       "FilePath": "/home/abner/crm-ps/Views/Home/Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/home/abner/crm-ps/Views/Home/Create.cshtml",
+      "TargetPath": "Views\\Home\\Create.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -16335,11 +16340,6 @@
     {
       "FilePath": "/home/abner/crm-ps/Views/Course/Index.cshtml",
       "TargetPath": "Views\\Course\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/home/abner/crm-ps/Views/Course/Criar.cshtml",
-      "TargetPath": "Views\\Course\\Criar.cshtml",
       "FileKind": "mvc"
     }
   ],

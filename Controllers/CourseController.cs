@@ -22,13 +22,13 @@ public class CourseController : Controller
         return View(candidates);
     }
 
-    public IActionResult Criar()
+    public IActionResult Create()
     {
         return View();
     }
 
     [HttpPost]
-    public IActionResult Criar(Course course)
+    public IActionResult Create(Course course)
     {
         if(ModelState.IsValid)
         {
