@@ -37,22 +37,16 @@
 <summary><strong>Como rodar?</strong></summary>
   
 1. Clone o repositório com o comando:
-  - `git clone git@github.com:abnerferreiradesousa/app-transferDIN.git`;
+  - `git clone https://github.com/abnerferreiradesousa/action`;
     - Entre na pasta do repositório:
-      - `cd app-transferDIN`
-2. Inicie a aplicação com o comando:
- - `docker-compose up -d --build`
+      - `cd action`
+2. Inicie o banco usando Docker:
+ - `sudo docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=Password12" \
+   -p 1433:1433 --name sql1 --hostname sql1 \
+   -d \
+   mcr.microsoft.com/mssql/server:2022-latest`
 
   
-</details>
-
-<details>
-  
-<summary><strong>Como usar cada rota?</strong></summary>  
-</br>
- 
-[Rotas Documentadas](https://github.com/abnerferreiradesousa/app-transferDIN/blob/main/NGCASH_API.md)
-      
 </details>
 
 <i><strong>Dica:</strong> Os usuários Phineas, Ferb, Perry e Abner já estão cadastrados caso queira mandar uma grana pra eles ou pra mim 😊.</i>
