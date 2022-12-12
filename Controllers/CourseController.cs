@@ -18,8 +18,10 @@ public class CourseController : Controller
     }
     public IActionResult Index()
     {
-        var candidates = _context.Courses.ToList();
-        return View(candidates);
+        var courses = _context.Courses.ToList();
+        var candidateId = TempData["CandidateId"];
+        ViewBag.CandidateId = candidateId;
+        return View(courses);
     }
 
     public IActionResult Create()

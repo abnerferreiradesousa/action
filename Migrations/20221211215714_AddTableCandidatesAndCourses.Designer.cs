@@ -11,7 +11,7 @@ using crm_ps.Context;
 namespace crmps.Migrations
 {
     [DbContext(typeof(PlataformContext))]
-    [Migration("20221210233535_AddTableCandidatesAndCourses")]
+    [Migration("20221211215714_AddTableCandidatesAndCourses")]
     partial class AddTableCandidatesAndCourses
     {
         /// <inheritdoc />

@@ -1,4 +1,5 @@
-@model IEnumerable<crm_ps.Models.Course>
+@model IEnumerable<crm_ps.Models.Course>;
+
 
 @{
     ViewData["Title"] = "Listagem de cursos";
@@ -13,6 +14,7 @@
 <div>
     @foreach (var item in Model)
     {
+        var idData = $"{ViewBag.CandidateId}s{item.Id}";
         <div class="bg-warning">
             <h2>
                 @Html.DisplayFor(model => item.Name)
@@ -21,7 +23,7 @@
                 @Html.DisplayFor(model => item.Level)
             </p>
             <div>
-                <a asp-action="Inscrever" asp-route-id="@item.Id">Inscrever-se</a>
+                <a asp-action="Inscrever" asp-route-id="@idData">Inscrever-se</a>
             </div>
         </div>
     }

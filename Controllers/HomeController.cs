@@ -15,7 +15,6 @@ public class HomeController : Controller
     // }
     
     public readonly PlataformContext _context;
-
     public HomeController(PlataformContext context)
     {
         _context = context;
@@ -37,10 +36,22 @@ public class HomeController : Controller
         {
             _context.Candidates.Add(candidate);
             _context.SaveChanges();
-            return RedirectPermanent("/Course/Index");
+            var candidateDb = _context.Candidates.OrderBy(c => c.Id).LastOrDefault();
+            TempData["CandidateId"] = candidateDb.Id;
+            return RedirectToAction("Index", "Course");
         }
         return View();
     }
+
+    // [HttpPost("{id}")]
+    // public IActionResult Inscrever(int id)
+    // {
+    //     var course = _context.Courses.Find(id);
+
+    //     _context.SaveChanges();
+        
+    //     return View();
+    // }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
