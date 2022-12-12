@@ -15,12 +15,13 @@ public class PlataformContext : DbContext
 
     public DbSet<Candidate> Candidates { get; set; }
     public DbSet<Course> Courses { get; set; }
+    public DbSet<CandidateCourse> CandidateCourses { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<Candidate>()
-                    .HasMany<Course>(s => s.Courses)
-                    .WithMany(c => c.Candidates);
+        modelBuilder.Entity<CandidateCourse>()
+            .HasKey(candidateCourse => 
+                new { candidateCourse.CandidateId, candidateCourse.CourseId });
     }
 
 }

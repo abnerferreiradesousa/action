@@ -1,3 +1,6 @@
+@using Microsoft.AspNetCore.Http
+@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
+
 @model IEnumerable<crm_ps.Models.Course>;
 
 
@@ -14,7 +17,7 @@
 <div>
     @foreach (var item in Model)
     {
-        var idData = $"{ViewBag.CandidateId}s{item.Id}";
+        var idData = $"{HttpContextAccessor.HttpContext.Session.GetString("CandidateId")}s{item.Id}";
         <div class="bg-warning">
             <h2>
                 @Html.DisplayFor(model => item.Name)
@@ -22,9 +25,12 @@
             <p>
                 @Html.DisplayFor(model => item.Level)
             </p>
-            <div>
-                <a asp-action="Inscrever" asp-route-id="@idData">Inscrever-se</a>
-            </div>
+            <form asp-action="Insc">
+
+                <input type="text" value="@idData" class="btn btn-primary" style="display: none">
+                <input type="submit" value="Inscrever-se" class="btn btn-primary">
+                @* <a asp-action="Insc" asp-controller="Course" asp-route-id="@idData">Inscrever-se</a> *@
+            </form>
         </div>
     }
 </div>

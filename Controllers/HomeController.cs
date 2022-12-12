@@ -37,21 +37,35 @@ public class HomeController : Controller
             _context.Candidates.Add(candidate);
             _context.SaveChanges();
             var candidateDb = _context.Candidates.OrderBy(c => c.Id).LastOrDefault();
-            TempData["CandidateId"] = candidateDb.Id;
+            HttpContext.Session.SetString("CandidateId", candidateDb.Id.ToString());
             return RedirectToAction("Index", "Course");
         }
         return View();
     }
 
-    // [HttpPost("{id}")]
-    // public IActionResult Inscrever(int id)
-    // {
-    //     var course = _context.Courses.Find(id);
+    public IActionResult Login()
+    {
+        return View();
+    }
 
-    //     _context.SaveChanges();
-        
-    //     return View();
-    // }
+    [HttpPost]
+    public IActionResult Login(Candidate candidate)
+    {
+        if(ModelState.IsValid) 
+        {
+            var candidateDb = _context.Candidates.First(c => c.CPF == candidate.CPF);
+            if(candidateDb == null) 
+            {
+                NotFound();
+            }
+            else 
+            {
+                HttpContext.Session.SetString("CandidateId", candidateDb.Id.ToString());
+                return RedirectToAction("Index", "Course");
+            }
+        }
+        return View();
+    }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()

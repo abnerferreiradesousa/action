@@ -21,21 +21,6 @@ namespace crmps.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("CandidateCourse", b =>
-                {
-                    b.Property<int>("CandidatesId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("CoursesId")
-                        .HasColumnType("int");
-
-                    b.HasKey("CandidatesId", "CoursesId");
-
-                    b.HasIndex("CoursesId");
-
-                    b.ToTable("CandidateCourse");
-                });
-
             modelBuilder.Entity("crm_ps.Models.Candidate", b =>
                 {
                     b.Property<int>("Id")
@@ -53,6 +38,21 @@ namespace crmps.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Candidates");
+                });
+
+            modelBuilder.Entity("crm_ps.Models.CandidateCourse", b =>
+                {
+                    b.Property<int>("CandidateId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CourseId")
+                        .HasColumnType("int");
+
+                    b.HasKey("CandidateId", "CourseId");
+
+                    b.HasIndex("CourseId");
+
+                    b.ToTable("CandidateCourses");
                 });
 
             modelBuilder.Entity("crm_ps.Models.Course", b =>
@@ -74,19 +74,28 @@ namespace crmps.Migrations
                     b.ToTable("Courses");
                 });
 
-            modelBuilder.Entity("CandidateCourse", b =>
+            modelBuilder.Entity("crm_ps.Models.CandidateCourse", b =>
                 {
-                    b.HasOne("crm_ps.Models.Candidate", null)
-                        .WithMany()
-                        .HasForeignKey("CandidatesId")
+                    b.HasOne("crm_ps.Models.Candidate", "Candidate")
+                        .WithMany("CandidateCourses")
+                        .HasForeignKey("CandidateId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("crm_ps.Models.Course", null)
+                    b.HasOne("crm_ps.Models.Course", "Course")
                         .WithMany()
-                        .HasForeignKey("CoursesId")
+                        .HasForeignKey("CourseId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Candidate");
+
+                    b.Navigation("Course");
+                });
+
+            modelBuilder.Entity("crm_ps.Models.Candidate", b =>
+                {
+                    b.Navigation("CandidateCourses");
                 });
 #pragma warning restore 612, 618
         }

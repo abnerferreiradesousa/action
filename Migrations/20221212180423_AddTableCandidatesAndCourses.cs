@@ -39,40 +39,40 @@ namespace crmps.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "CandidateCourse",
+                name: "CandidateCourses",
                 columns: table => new
                 {
-                    CandidatesId = table.Column<int>(type: "int", nullable: false),
-                    CoursesId = table.Column<int>(type: "int", nullable: false)
+                    CandidateId = table.Column<int>(type: "int", nullable: false),
+                    CourseId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_CandidateCourse", x => new { x.CandidatesId, x.CoursesId });
+                    table.PrimaryKey("PK_CandidateCourses", x => new { x.CandidateId, x.CourseId });
                     table.ForeignKey(
-                        name: "FK_CandidateCourse_Candidates_CandidatesId",
-                        column: x => x.CandidatesId,
+                        name: "FK_CandidateCourses_Candidates_CandidateId",
+                        column: x => x.CandidateId,
                         principalTable: "Candidates",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_CandidateCourse_Courses_CoursesId",
-                        column: x => x.CoursesId,
+                        name: "FK_CandidateCourses_Courses_CourseId",
+                        column: x => x.CourseId,
                         principalTable: "Courses",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_CandidateCourse_CoursesId",
-                table: "CandidateCourse",
-                column: "CoursesId");
+                name: "IX_CandidateCourses_CourseId",
+                table: "CandidateCourses",
+                column: "CourseId");
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "CandidateCourse");
+                name: "CandidateCourses");
 
             migrationBuilder.DropTable(
                 name: "Candidates");

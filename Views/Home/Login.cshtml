@@ -1,0 +1,33 @@
+@model crm_ps.Models.Candidate
+
+@{
+    ViewData["Title"] = "Logando";
+}
+
+<h1>Login</h1>
+
+<hr />
+
+<div class="row divclasstwo">
+    <div class="col-md-4">
+        <form asp-action="Login" method="POST">
+
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label asp-for="CPF" class="control-label"></label>
+                <input asp-for="CPF" class="form-control" />
+            </div>
+
+            <br />
+            <div class="form-group">
+                <a asp-action="Index" class="btn btn-primary">Voltar</a>
+                <input type="submit" value="Login" class="btn btn-primary">
+            </div>
+        </form>
+    </div>
+</div>
+

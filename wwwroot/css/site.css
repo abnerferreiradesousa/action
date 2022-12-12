@@ -3,6 +3,12 @@
   height:60vh;
 }
 
+.astyle {
+  background-color: white;
+  color: black;
+  border-color: black;
+}
+
 .divclass
 {
   display: flex;
