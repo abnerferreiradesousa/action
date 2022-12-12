@@ -1,78 +1,32 @@
-<h1 align="center">🚀 Bem vindo ao projeto TransferDIN! 🚀</h1>
+<h1 align="center">🚀 Bem vindo ao projeto CRM Action! 🚀</h1>
 
 <h2>🥱 Introdução...</h2>
 
-<p>Este repositório contém uma aplicação fullstack dockerizada, de um sistema de transferência semelhante ao de um banco, desenvolvidos usando Typescript, React com Next.js e PostgresSQL.</p>
+<p>Este repositório contém uma aplicação fullstack, de um sistema de cursos e candidatos, desenvolvidos usando C#, .NET.</p>
 
 ![alt text](https://raw.githubusercontent.com/abnerferreiradesousa/app-transferDIN/main/images/app.png)
 
 <details>
 <summary><strong> 🛠️ Tecnologias utilizadas 🧰 </strong></summary>
 
-* <p>👉 TypeScript</p>
+* <p>👉 C#</p>
 
-* <p>👉 PostgresSQL</p>
+* <p>👉 Entity Framework</p>
 
-* <p>👉 Docker</p>
+* <p>👉 Session</p>
 
-* <p>👉 JsonWebToken</p>
+* <p>👉 MVC</p>
 
-* <p>👉 TypeORM</p>
-
-* <p>👉 Express.js</p>
-
-* <p>👉 Node.js</p>
-
-* <p>👉 Bcrypt</p>
-
-* <p>👉 Next.js</p>
-
-* <p>👉 Redux</p>
-
-* <p>👉 SASS</p>
+* <p>👉 ASP.NET</p>
 
 </details>
 
 <details>
 <summary><strong> Critérios do projeto </strong></summary>
 
-## Backend
-
-- ☑️ Qualquer pessoa deverá poder fazer parte da NG. Para isso, basta realizar o cadastro informando *username* e *password*.
-
-- ☑️ Deve-se garantir que cada *username* seja único e composto por, pelo menos, 3 caracteres.
-
-- ☑️ Deve-se garantir que a *password* seja composta por pelo menos 8 caracteres, um número e uma letra maiúscula. Lembre-se que ela deverá ser *hashada* ao ser armazenada no banco.
-
-- ☑️ Durante o processo de cadastro de um novo usuário, sua respectiva conta deverá ser criada automaticamente na tabela **Accounts** com um *balance* de R$ 100,00. É importante ressaltar que caso ocorra algum problema e o usuário não seja criado,  a tabela **Accounts** não deverá ser afetada.
-
-- ☑️ Todo usuário deverá conseguir logar na aplicação informando *username* e *password.* Caso o login seja bem-sucedido, um token JWT (com 24h de validade) deverá ser fornecido.
-
-- ☑️ Todo usuário logado (ou seja, que apresente um token válido) deverá ser capaz de visualizar seu próprio *balance* atual. Um usuário A não pode visualizar o *balance* de um usuário B, por exemplo.
-
-- ☑️ Todo usuário logado (ou seja, que apresente um token válido) deverá ser capaz de realizar um *cash-out* informando o *username* do usuário que sofrerá o *cash-in*), caso apresente *balance* suficiente para isso. Atente-se ao fato de que um usuário não deverá ter a possibilidade de realizar uma transferência para si mesmo.
-- ☑️ Toda nova transação bem-sucedida deverá ser registrada na tabela **Transactions**. Em casos de falhas transacionais, a tabela **Transactions** não deverá ser afetada.
-- ☑️ Todo usuário logado (ou seja, que apresente um token válido) deverá ser capaz de visualizar as transações financeiras (*cash-out* e *cash-in*) que participou. Caso o usuário não tenha participado de uma determinada transação, ele nunca poderá ter acesso à ela.
-- ☑️ Todo usuário logado (ou seja, que apresente um token válido) deverá ser capaz de filtrar as transações financeiras que participou por:
-    - ☑️ ❌ Data de realização da transação OU
-        - ☑️ Transações de *cash-out;*
-        - ☑️ Transações de *cash-in.*
-    - ☑️ ❌ Data de realização da transação E
-        - ☑️ Transações de *cash-out;*
-        - ☑️ Transações de *cash-in.*
-
-## Frontend
-
-- ☑️ Página para realizar o cadastro na NG informando *username* e *password.*
-- ☑️ Página para realizar o login informando *username* e *password.*
-- ☑️ Com o usuário logado, a página principal deve apresentar:
-    - ☑️ *balance* atual do usuário;
-    - ☑️ Seção voltada à realização de transferências para outros usuários NG a partir do *username* de quem sofrerá o *cash-in*;
-    - ☑️ Tabela com os detalhes de todas as transações que o usuário participou;
-    - ❌ Mecanismo para filtrar a tabela por data de transação e
-        - ☑️ ou transações do tipo *cash-in*/*cash-out*;
-    - ☑️ Botão para realizar o *log-out.*
-
+- ☑️ Cadastrar lead (candidato) com validação de CPF
+- ☑️ Cadastrar novos cursos
+- ❌ Cadastrar uma nova inscrição, a inscrição é comporta por um candidato e um curso, um candidato pode ter mais de uma inscrição.
 </details>
 
 
