@@ -5,7 +5,7 @@
 <p>Este repositório contém uma aplicação fullstack, de um sistema de cursos e candidatos, desenvolvidos usando C#, .NET.</p>
 
 <details>
-<summary><strong>Resultado final da aplicação<strong></summary>
+<summary><strong>Resultado final da aplicação</strong></summary>
 <img src="https://raw.githubusercontent.com/abnerferreiradesousa/action/main/img/Captura de tela de 2022-12-12 20-35-32.png">
 <img src="https://raw.githubusercontent.com/abnerferreiradesousa/action/main/img/Captura de tela de 2022-12-12 20-35-43.png">
 <img src="https://raw.githubusercontent.com/abnerferreiradesousa/action/main/img/Captura de tela de 2022-12-12 20-35-54.png">
