@@ -5,10 +5,11 @@
 <p>Este repositório contém uma aplicação fullstack, de um sistema de cursos e candidatos, desenvolvidos usando C#, .NET.</p>
 
 <details>
-<summary>Resultado final da aplicação</summary>
+<summary><strong>Resultado final da aplicação<strong></summary>
 <img src="https://raw.githubusercontent.com/abnerferreiradesousa/action/main/img/Captura de tela de 2022-12-12 20-35-32.png">
 <img src="https://raw.githubusercontent.com/abnerferreiradesousa/action/main/img/Captura de tela de 2022-12-12 20-35-43.png">
 <img src="https://raw.githubusercontent.com/abnerferreiradesousa/action/main/img/Captura de tela de 2022-12-12 20-35-54.png">
+<img src="https://raw.githubusercontent.com/abnerferreiradesousa/action/main/img/Captura de tela de 2022-12-12 20-36-13.png">
 <img src="https://raw.githubusercontent.com/abnerferreiradesousa/action/main/img/Captura de tela de 2022-12-12 20-36-08.png">
 </details>
 
@@ -64,4 +65,4 @@
 
 <h2>💥 Defafios que enfrentei... 🗡️</h2> 
 
-* 🗡️ O principal desafio foi inserir no banco de dados a inscrição em um curso, a meu ver "estava no papo esse requsito", mas a aplicação insiste em não encontrar a rota para realizar tal ação. Enfim, sigo buscando resolver esse problema.
+* 🗡️ O principal desafio foi inserir no banco de dados a inscrição em um curso, que no caso precisa do id do curso e do usuário, a meu ver "estava no papo" esse requsito, mas com o andar da carruagem, a aplicação insistia em não encontrar a rota para realizar tal ação, isso quando não interferia nas outras rotas. Enfim, sigo em busca de resolver esse problema.
